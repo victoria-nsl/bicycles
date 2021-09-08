@@ -25,7 +25,6 @@
     height: 50px;
 
     cursor: pointer;
-    border: none;
   }
 }
 
@@ -131,7 +130,7 @@
 
 .main-navigation__item {
   @media (max-width: $tablet-max-width) {
-    width: 100%;
+    width: 95.8%;
     margin-bottom: 30px;
     padding: 17px 16px 15px 16px;
 
@@ -156,19 +155,24 @@
   @media (max-width: $tablet-max-width) {
     display: flex;
     justify-content: space-between;
-    color: $grey;
 
     font-weight: 400;
     font-size: 20px;
     line-height: 140%;
+    color: $grey;
   }
 }
 
 .main-navigation__item a::after {
-  content: "";
-  width: 25px;
-  height: 25px;
-  background-image: url("../img/back-icon-arrow.svg");
+  @media (max-width: $tablet-max-width) {
+    content: "";
+
+    width: 25px;
+    height: 25px;
+    margin-right: 17px;
+
+    background-image: url("../img/back-icon-arrow.svg");
+  }
 }
 
 //логотип
