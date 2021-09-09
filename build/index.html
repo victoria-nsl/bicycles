@@ -48,7 +48,33 @@
   <main class="page-main">
     <h1 class="visually-hidden">Магазин "Велосипеды"</h1>
     <section class="promo">
-      <h2>Мы продаем велосипеды</h2>
+      <div class="promo__description-block">
+        <h2>Мы продаем велосипеды</h2>
+        <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+      </div>
+      <div class="promo__form-block">
+        <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+        <form class="promo__form">
+          <fieldset class="promo__fieldset">
+            <legend class="visually-hidden">
+              Данные покупателя
+            </legend>
+            <ul class="promo__list">
+              <li class="promo__item">
+                <label class="visually-hidden" for="customer-name"> Имя </label>
+                <input id="customer-name" type="text" name="cat-name" placeholder="Введите Ваше Имя" required="">
+              </li>
+              <li class="promo__item">
+                <label class="visually-hidden" for="tel">Телефон</label>
+                <input id="tel" type="tel" name="tel" placeholder="Введите Ваш номер телефона" required="">
+              </li>
+            </ul>
+          </fieldset>
+          <button class="promo__button" type="submit">
+            Подобрать велосипед мечты
+          </button>
+        </form>
+      </div>
     </section>
     <section class="about-facts" id="about-facts">
       <h2>Несколько фактов о нас</h2>

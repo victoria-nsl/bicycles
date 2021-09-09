@@ -4,3 +4,9 @@
 
   list-style: none;
 }
+
+@mixin reset-style-fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}

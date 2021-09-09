@@ -216,3 +216,30 @@
     color: rgba($grey, 0.5);
   }
 }
+
+.main-navigation--closed .main-navigation__toggle:focus {
+  outline: 2px solid $white;
+}
+
+.main-navigation--opened .main-navigation__toggle:focus {
+  outline: 2px solid $green;
+}
+
+.main-navigation--closed .main-navigation__toggle:hover {
+  opacity: 0.9;
+}
+
+.main-navigation--opened .main-navigation__toggle:hover {
+  opacity: 0.7;
+}
+
+
+.main-navigation--closed .main-navigation__toggle:active {
+  outline: none;
+  opacity: 0.7;
+}
+
+.main-navigation--opened .main-navigation__toggle:active {
+  outline: none;
+  opacity: 0.3;
+}
