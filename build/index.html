@@ -19,22 +19,22 @@
       </button>
       <ul class="main-navigation__list">
         <li class="main-navigation__item">
-          <a href="#about-facts">
+          <a class="main-navigation__link" href="#about-facts">
             О нас
           </a>
         </li>
         <li class="main-navigation__item">
-          <a href="#types-bicycles">
+          <a class="main-navigation__link" href="#types-bicycles">
             Виды велосипедов
           </a>
         </li>
         <li class="main-navigation__item">
-          <a href="#video">
+          <a class="main-navigation__link" href="#video">
             Видео про велосипеды
           </a>
         </li>
         <li class="main-navigation__item">
-          <a href="#video">
+          <a class="main-navigation__link" href="#video">
             Контакты
           </a>
         </li>
@@ -43,7 +43,6 @@
         <img src="img/logotype.svg" width="68" height="20" alt="Логотип магазина по продаже велосипедов Moon">
       </a>
     </nav>
-
   </header>
 
   <main class="page-main">
@@ -61,9 +60,31 @@
       <h2>Видео про велосипеды</h2>
     </section>
   </main>
-  <footer class="page-footer" id="page-footer">
-  </footer>
 
+  <footer class="page-footer" id="page-footer">
+    <div class="page-footer__address-block">
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая <br> Конюшенная, д. 19</p>
+    </div>
+    <div class="page-footer__map-block">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.32089461619272!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1631178168934!5m2!1sru!2sru" height="530" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
+      </iframe>
+    </div>
+    <div class="page-footer__links-block">
+      <a class="page-footer__link page-footer__link--email" href="mailto:puteshestviemechta@gmail.ru" aria-label="Отправить email магазина по продаже велосипедов Moon">
+        <svg role="img" width="26" height="20">
+          <use xlink:href="img/sprite_auto.svg#icon-envelope"></use>
+        </svg>
+        <span>puteshestviemechta@gmail.ru</span>
+      </a>
+      <a class="page-footer__link page-footer__link--phone" href="tel:+749978468446" aria-label="Позвонить по номеру магазина по продаже велосипедов Moon">
+        <svg role="img" width="22" height="22">
+          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+        </svg>
+        <span>+7 (499) -784-684-46 </span>
+      </a>
+    </div>
+  </footer>
   <script src="./js/script.js"></script>
 </body>
 </html>
