@@ -198,3 +198,21 @@
   width: 68px;
   height: 20px;
 }
+
+//Стайлгайд
+.main-navigation__link:focus {
+  outline: 2px solid $green;
+}
+
+.main-navigation__link:hover {
+  color: $green;
+}
+
+.main-navigation__link:active {
+  outline: none;
+  color: rgba($white, 0.3);
+
+  @media (max-width: $tablet-max-width) {
+    color: rgba($grey, 0.5);
+  }
+}
