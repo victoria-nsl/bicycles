@@ -54,7 +54,7 @@
       </div>
       <div class="promo__form-block">
         <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-        <form class="promo__form">
+        <form class="promo__form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
           <fieldset class="promo__fieldset">
             <legend class="visually-hidden">
               Данные покупателя
@@ -62,11 +62,11 @@
             <ul class="promo__list">
               <li class="promo__item">
                 <label class="visually-hidden" for="customer-name"> Имя </label>
-                <input id="customer-name" type="text" name="cat-name" placeholder="Введите Ваше Имя" required="">
+                <input id="customer-name" type="text" name="customer-name" placeholder="Введите Ваше Имя" required="">
               </li>
               <li class="promo__item">
                 <label class="visually-hidden" for="tel">Телефон</label>
-                <input id="tel" type="tel" name="tel" placeholder="Введите Ваш номер телефона" required="">
+                <input id="tel" type="tel" name="tel" placeholder="Введите Ваш номер телефона" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" required="">
               </li>
             </ul>
           </fieldset>
