@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const REGULAR_EXPRESSION_PHONE =/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
 
 const navigationMain = document.querySelector('.main-navigation');
@@ -45,6 +44,11 @@ try {
 
 } catch (err) {
   isStorageSupport = false;
+}
+
+if (storageName && storageTel) {
+  userInputPhone.value = storageTel;
+  userInputName.value = storageName;
 }
 
 form.addEventListener('submit', (evt)  => {

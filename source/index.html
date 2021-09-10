@@ -47,6 +47,7 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">Магазин "Велосипеды"</h1>
+
     <section class="promo">
       <div class="promo__description-block">
         <h2>Мы продаем велосипеды</h2>
@@ -76,6 +77,7 @@
         </form>
       </div>
     </section>
+
     <section class="about-facts" id ="about-facts">
       <h2>Несколько фактов о нас</h2>
       <ul class="about-facts__list">
@@ -97,8 +99,45 @@
         </li>
       </ul>
     </section>
+
     <section class="types-bicycles" id ="types-bicycles">
       <h2>Виды велосипедов</h2>
+      <ul class="types-bicycles__list">
+        <li class="types-bicycles__item types-bicycles__item--road">
+          <h3>Дорожный велосипед</h3>
+          <div class="types-bicycles__wrapper-img types-bicycles__wrapper-img--road">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/types-bicycles-1-tablet.webp 1x, img/types-bicycles-1-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/ttypes-bicycles-1-desktop.webp 1x, img/types-bicycles-1-desktop@2x.webp 2x">
+              <!--1x: 342px 2x: 684px-->
+              <img width="342" height="503" src="img/types-bicycles-1-desktop.jpg" srcset="img/types-bicycles-1-desktop@2x.jpg 2x"  alt= "Фотография велосипеда, стоящего у кирпичной стены">
+            </picture>
+          </div>
+        </li>
+        <li class="types-bicycles__item types-bicycles__item--mountains">
+          <h3>Горный велосипед</h3>
+          <div class="types-bicycles__wrapper-img types-bicycles__wrapper-img--mountains">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/types-bicycles-2-tablet.webp 1x, img/types-bicycles-2-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/ttypes-bicycles-2-desktop.webp 1x, img/types-bicycles-2-desktop@2x.webp 2x">
+              <!--1x: 342px 2x: 684px-->
+              <img width="342" height="566" src="img/types-bicycles-2-desktop.jpg" srcset="img/types-bicycles-2-desktop@2x.jpg 2x"  alt= "Фотография велосипеда, стоящего на вершине горы">
+            </picture>
+          </div>
+        </li>
+        <li class="types-bicycles__item">
+          <h3>Детский велосипед</h3>
+          <div class="types-bicycles__wrapper-img types-bicycles__wrapper-img--child">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/types-bicycles-3-tablet.webp 1x, img/types-bicycles-3-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/ttypes-bicycles-3-desktop.webp 1x, img/types-bicycles-3-desktop@2x.webp 2x">
+              <!--1x: 342px 2x: 684px-->
+              <img width="342" height="512" src="img/types-bicycles-3-desktop.jpg" srcset="img/types-bicycles-3-desktop@2x.jpg 2x"  alt= "Фотография детского велосипеда, стоящего у подъезда дома">
+            </picture>
+          </div>
+        </li>
+      </ul>
+
     </section>
     <section class="video" id ="video">
       <h2>Видео про велосипеды</h2>
