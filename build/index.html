@@ -19,22 +19,22 @@
       </button>
       <ul class="main-navigation__list">
         <li class="main-navigation__item">
-          <a class="main-navigation__link" href="#about-facts">
+          <a href="#about-facts">
             О нас
           </a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__link" href="#types-bicycles">
+          <a href="#types-bicycles">
             Виды велосипедов
           </a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__link" href="#video">
+          <a href="#video">
             Видео про велосипеды
           </a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__link" href="#contacts">
+          <a href="#contacts">
             Контакты
           </a>
         </li>
@@ -71,7 +71,7 @@
               </li>
             </ul>
           </fieldset>
-          <button class="promo__button" type="submit">
+          <button type="submit">
             Подобрать велосипед мечты
           </button>
         </form>
@@ -106,9 +106,9 @@
         <li class="types-bicycles__item types-bicycles__item--road">
           <h3>Дорожный велосипед</h3>
           <div class="types-bicycles__wrapper-img types-bicycles__wrapper-img--road">
-            <picture>
+          <picture>
               <source type="image/webp" media="(max-width: 1023px)" srcset="img/types-bicycles-1-tablet.webp 1x, img/types-bicycles-1-tablet@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/ttypes-bicycles-1-desktop.webp 1x, img/types-bicycles-1-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/types-bicycles-1-desktop.webp 1x, img/types-bicycles-1-desktop@2x.webp 2x">
               <!--1x: 342px 2x: 684px-->
               <img width="342" height="503" src="img/types-bicycles-1-desktop.jpg" srcset="img/types-bicycles-1-desktop@2x.jpg 2x" alt="Фотография велосипеда, стоящего у кирпичной стены">
             </picture>
@@ -119,7 +119,7 @@
           <div class="types-bicycles__wrapper-img types-bicycles__wrapper-img--mountains">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)" srcset="img/types-bicycles-2-tablet.webp 1x, img/types-bicycles-2-tablet@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/ttypes-bicycles-2-desktop.webp 1x, img/types-bicycles-2-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/types-bicycles-2-desktop.webp 1x, img/types-bicycles-2-desktop@2x.webp 2x">
               <!--1x: 342px 2x: 684px-->
               <img width="342" height="566" src="img/types-bicycles-2-desktop.jpg" srcset="img/types-bicycles-2-desktop@2x.jpg 2x" alt="Фотография велосипеда, стоящего на вершине горы">
             </picture>
@@ -130,7 +130,7 @@
           <div class="types-bicycles__wrapper-img types-bicycles__wrapper-img--child">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)" srcset="img/types-bicycles-3-tablet.webp 1x, img/types-bicycles-3-tablet@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/ttypes-bicycles-3-desktop.webp 1x, img/types-bicycles-3-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/types-bicycles-3-desktop.webp 1x, img/types-bicycles-3-desktop@2x.webp 2x">
               <!--1x: 342px 2x: 684px-->
               <img width="342" height="512" src="img/types-bicycles-3-desktop.jpg" srcset="img/types-bicycles-3-desktop@2x.jpg 2x" alt="Фотография детского велосипеда, стоящего у подъезда дома">
             </picture>
@@ -140,7 +140,22 @@
 
     </section>
     <section class="video" id="video">
-      <h2>Видео про велосипеды</h2>
+      <div class="video__description-block">
+        <h2>Видео про велосипеды</h2>
+        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+      </div>
+      <div class="video__image-block">
+        <div class="video__wrapper-img">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x">
+            <!--1x: 929px 2x: 1858px-->
+            <img width="929" height="522" src="img/video-desktop.jpg" srcset="img/video-desktop@2x.jpg 2x" alt="Изображение черного велосипеда">
+          </picture>
+        </div>
+        <button type="button" aria-label="Воспроизвести видео"></button>
+      </div>
     </section>
   </main>
 

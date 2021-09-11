@@ -40,7 +40,7 @@
 
 .promo__description-block h2 {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 
   font-weight: 700;
   font-size: 46px;
@@ -96,7 +96,7 @@
 
 .promo__form-block p {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 
   font-weight: 600;
   font-size: 17px;
@@ -171,7 +171,7 @@
   opacity: 0.5;
 }
 
-.promo__button {
+.promo__form-block button {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
@@ -209,7 +209,7 @@
   outline: 2px solid $green;
 }
 
-.promo__button:focus {
+.promo__form-block button:focus {
   outline: 2px solid $white;
 
   @media (max-width: $tablet-max-width) {
@@ -221,8 +221,8 @@
   color: $green;
 }
 
-.promo__button:hover {
-  opacity: 0.9;
+.promo__form-block button:hover {
+  background-color: $green-dark;
 }
 
 .promo__list input:active {
@@ -234,7 +234,7 @@
   opacity: 0.3;
 }
 
-.promo__button:active {
+.promo__form-block button:active {
   outline: none;
   color: rgba($black, 0.3);
 }

@@ -1,3 +1,11 @@
 .page-main {
-  margin-bottom: 147px;
+  margin-bottom: 150px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 71px;
+  }
 }

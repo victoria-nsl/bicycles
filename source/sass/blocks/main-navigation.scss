@@ -154,7 +154,7 @@
   }
 }
 
-.main-navigation__link {
+.main-navigation__item a {
   font-weight: 300;
   font-size: 16px;
   line-height: 32px;
@@ -171,7 +171,7 @@
   }
 }
 
-.main-navigation__link::after {
+.main-navigation__item a::after {
   @media (max-width: $tablet-max-width) {
     content: "";
 
@@ -203,15 +203,15 @@
 }
 
 //Стайлгайд
-.main-navigation__link:focus {
+.main-navigation__item a:focus {
   outline: 2px solid $green;
 }
 
-.main-navigation__link:hover {
+.main-navigation__item a:hover {
   color: $green;
 }
 
-.main-navigation__link:active {
+.main-navigation__item a:active {
   outline: none;
   color: rgba($white, 0.3);
 
@@ -235,7 +235,6 @@
 .main-navigation--opened .main-navigation__toggle:hover {
   opacity: 0.7;
 }
-
 
 .main-navigation--closed .main-navigation__toggle:active {
   outline: none;
