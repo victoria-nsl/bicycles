@@ -6,20 +6,14 @@
   margin: 0 auto;
 
   @media (max-width: $tablet-max-width) {
-    width: 97.2%;
+    width: 100%;
     max-width: 100%;
     padding-top: 25px;
-    padding-left: 21px;
     padding-bottom: 5px;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    width: 95%;
-    padding-left: 16px;
   }
 }
 
-//кнопка переключения меню
+//КНОПКА ПЕРЕКЛЮЧЕНИЯ МЕНЮ
 .main-navigation__toggle {
   display: none;
 
@@ -93,7 +87,7 @@
   }
 }
 
-//элементы навигации
+//ЭЛЕМЕНТЫ НАВИГАЦИИ
 .main-navigation__list {
   @include reset-style-list;
 
@@ -104,18 +98,9 @@
   border-bottom: 1px solid rgba($white, 0.2);
 
   @media (max-width: $tablet-max-width) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 20;
-
-    flex-direction: column;
-    order: 2;
+    display: block;
     width: 100%;
     padding: 0;
-    padding-top: 100px;
 
     background-color: $white;
     border-bottom: none;
@@ -129,20 +114,18 @@
 }
 
 
-.main-navigation--nojs .main-navigation__list {
-  @media (max-width: $tablet-max-width) {
-    display: block;
-  }
-}
-
-
 .main-navigation__item {
   @media (max-width: $tablet-max-width) {
     width: 95.8%;
     margin-bottom: 30px;
-    padding: 17px 16px 15px 16px;
+    padding: 17px 2.1% 15px 2.1%;
 
     background-color: $grey-background;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 90%;
+    padding: 17px 5% 15px 5%;
   }
 }
 
@@ -154,7 +137,7 @@
   }
 }
 
-.main-navigation__item a {
+.main-navigation__item a[href*="#"] {
   font-weight: 300;
   font-size: 16px;
   line-height: 32px;
@@ -171,19 +154,53 @@
   }
 }
 
-.main-navigation__item a::after {
+.main-navigation__item a[href*="#"]::after {
   @media (max-width: $tablet-max-width) {
     content: "";
 
     width: 25px;
     height: 25px;
-    margin-right: 20px;
+    margin-right: 0;
 
     background-image: url("../img/back-icon-arrow.svg");
   }
 }
 
-//логотип
+//cтили элементов навигации при оключенном js
+.main-navigation--nojs .main-navigation__list {
+  @media (max-width: $tablet-max-width) {
+    display: flex;
+    order: 2;
+
+    width: 100%;
+    margin-bottom: 250px;
+    background-color: transparent;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 270px;
+  }
+}
+
+.main-navigation--nojs .main-navigation__item {
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 10px;
+    padding: 15px 16px 10px 16px;
+    background-color: transparent;
+  }
+}
+
+.main-navigation--nojs a[href*="#"] {
+  @media (max-width: $tablet-max-width) {
+    color: $white;
+  }
+}
+
+.main-navigation--nojs a[href*="#"]::after {
+  display: none;
+}
+
+//ЛОГОТИП
 .main-navigation__logo-link {
   position: absolute;
   left: calc(50% - 440px);
@@ -194,6 +211,11 @@
     order: 1;
     width: 68px;
     height: 20px;
+    margin-left: 21px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 16px;
   }
 }
 
@@ -202,21 +224,50 @@
   height: 20px;
 }
 
-//Стайлгайд
-.main-navigation__item a:focus {
+//СТИЛИ ПРИ ОТКРЫТОМ МЕНЮ В ПЛАНШЕТНОЙ И МОБИЛЬНОЙ ВЕРСИИ
+.main-navigation--opened {
+  @media (max-width: $tablet-max-width) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+
+    background-color: $white;
+    overflow-y: auto;
+  }
+}
+
+.main-navigation--opened .main-navigation__logo-link {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+//СТАЙЛГАЙД
+.main-navigation__item a[href*="#"]:focus {
   outline: 2px solid $green;
 }
 
-.main-navigation__item a:hover {
+.main-navigation__item a[href*="#"]:hover {
   color: $green;
 }
 
-.main-navigation__item a:active {
+.main-navigation--opened a[href*="#"]:hover {
+  background-color: $white;
+}
+
+.main-navigation__item a[href*="#"]:active {
   outline: none;
   color: rgba($white, 0.3);
 
   @media (max-width: $tablet-max-width) {
-    color: rgba($grey, 0.5);
+    color: rgba($green, 0.5);
   }
 }
 

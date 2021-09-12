@@ -234,7 +234,7 @@
 .types-bicycles__wrapper-img--road::after {
   position: absolute;
   z-index: -10;
-  bottom: 170px;
+  bottom: 168px;
   left: -60px;
   content: "";
 
@@ -247,7 +247,7 @@
 
 
   @media (max-width: $tablet-max-width) {
-    bottom: -25px;
+    bottom: -27px;
     left: -35px;
 
     width: 127px;
@@ -257,7 +257,6 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    bottom: -27px;
     left: -25px;
   }
 }
