@@ -100,4 +100,3 @@ if (userInputPhone) {
     checkInputPhone(evt.target);
   });
 }
-

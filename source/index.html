@@ -14,6 +14,9 @@
 </head>
 <body>
   <header class="page-header">
+    <!-- main-navigation--nojs - откpытое меню при отключенном js, кнопки нет
+    main-navigation--closed - закрытое меню, кнопка для открытия /гамбургер/
+    main-navigation--opened - открытое меню, кнопка для закрытия /крестик/ -->
     <nav class="main-navigation main-navigation--closed main-navigation--nojs">
       <button class="main-navigation__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -185,6 +188,6 @@
       </a>
     </div>
   </footer>
-  <script src="./js/script.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
