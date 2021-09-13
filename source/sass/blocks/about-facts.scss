@@ -2,8 +2,8 @@
   width: 100%;
   max-width: 1266px;
   margin: 0 auto;
-  margin-bottom: 152px;
-  padding: 0 50px;
+  margin-bottom: 102px;
+  padding: 0 31px;
   padding-top: 5px;
   box-sizing: border-box;
 
@@ -11,7 +11,7 @@
   @media (max-width: $tablet-max-width) {
     width: 100%;
     margin-bottom: 28px;
-    padding: 0 106px;
+    padding: 0 91px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -47,23 +47,30 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
 .about-facts__item {
-  width: 22.5%;
+  width: 21.8%;
+  margin-left: 1.6%;
+  margin-right: 1.6%;
+  margin-bottom: 50px;
 
   text-align: center;
 
   @media (max-width: $tablet-max-width) {
-    width: 47.3%;
+    width: 44.8%;
+    margin-left: 2.6%;
+    margin-right: 2.6%;
     margin-bottom: 42px;
   }
 
   @media (max-width: $mobile-max-width) {
     width: 100%;
     min-height: 130px;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 30px;
   }
 }
