@@ -13,6 +13,23 @@
   }
 }
 
+.main-navigation--opened {
+  @media (max-width: $tablet-max-width) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+
+    background-color: $white;
+  }
+}
+
 //КНОПКА ПЕРЕКЛЮЧЕНИЯ МЕНЮ
 .main-navigation__toggle {
   display: none;
@@ -99,13 +116,43 @@
   padding: 21px 0 9px 0;
 
   @media (max-width: $tablet-max-width) {
+    padding: 0;
+  }
+}
+
+.main-navigation--closed .main-navigation__list {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.main-navigation--opened .main-navigation__list {
+  @media (max-width: $tablet-max-width) {
     display: block;
     width: 100%;
-    padding: 0;
+    height: calc(100vh - 100px);
+    overflow-x: hidden;
+    overflow-y: auto;
 
     background-color: $white;
   }
 }
+
+.main-navigation--nojs .main-navigation__list {
+  @media (max-width: $tablet-max-width) {
+    display: flex;
+    order: 2;
+
+    width: 100%;
+    margin-bottom: 250px;
+    background-color: transparent;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 270px;
+  }
+}
+
 
 .main-navigation__list::after {
   position: absolute;
@@ -124,30 +171,40 @@
   }
 }
 
-.main-navigation--closed .main-navigation__list {
-  @media (max-width: $tablet-max-width) {
-    display: none;
-  }
-}
-
-
 .main-navigation__item {
   margin-left: 68px;
   margin-right: 68px;
 
   @media (max-width: $tablet-max-width) {
-    width: 95.8%;
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+.main-navigation--opened .main-navigation__item {
+  @media (max-width: $tablet-max-width) {
+    width: 95.8%;
     margin-bottom: 30px;
     padding: 17px 2.1% 15px 2.1%;
-
     background-color: $grey-background;
   }
 
   @media (max-width: $mobile-max-width) {
     width: 90%;
     padding: 17px 5% 15px 5%;
+  }
+}
+
+.main-navigation--nojs .main-navigation__item {
+  @media (max-width: $tablet-max-width) {
+    width: auto;
+    margin-bottom: 10px;
+    padding: 15px 16px 10px 16px;
+    background-color: transparent;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 90%;
   }
 }
 
@@ -158,13 +215,23 @@
   color: $white;
 
   @media (max-width: $tablet-max-width) {
-    display: flex;
-    justify-content: space-between;
-
     font-weight: 400;
     font-size: 20px;
     line-height: 140%;
+  }
+}
+
+.main-navigation--opened a[href*="#"] {
+  @media (max-width: $tablet-max-width) {
+    display: flex;
+    justify-content: space-between;
     color: $grey;
+  }
+}
+
+.main-navigation--nojs a[href*="#"] {
+  @media (max-width: $tablet-max-width) {
+    color: $white;
   }
 }
 
@@ -177,36 +244,6 @@
     margin-right: 0;
 
     background-image: url("../img/back-icon-arrow.svg");
-  }
-}
-
-//cтили элементов навигации при оключенном js
-.main-navigation--nojs .main-navigation__list {
-  @media (max-width: $tablet-max-width) {
-    display: flex;
-    order: 2;
-
-    width: 100%;
-    margin-bottom: 250px;
-    background-color: transparent;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    margin-bottom: 270px;
-  }
-}
-
-.main-navigation--nojs .main-navigation__item {
-  @media (max-width: $tablet-max-width) {
-    margin-bottom: 10px;
-    padding: 15px 16px 10px 16px;
-    background-color: transparent;
-  }
-}
-
-.main-navigation--nojs a[href*="#"] {
-  @media (max-width: $tablet-max-width) {
-    color: $white;
   }
 }
 
@@ -229,7 +266,7 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-left: 16px;
+    margin-left: 5%;
   }
 }
 
@@ -238,30 +275,13 @@
   height: 20px;
 }
 
-//СТИЛИ ПРИ ОТКРЫТОМ МЕНЮ В ПЛАНШЕТНОЙ И МОБИЛЬНОЙ ВЕРСИИ
-.main-navigation--opened {
-  @media (max-width: $tablet-max-width) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 20;
-
-    width: 100%;
-    height: 100%;
-    padding-top: 100px;
-
-    background-color: $white;
-    overflow-y: auto;
-  }
-}
 
 .main-navigation--opened .main-navigation__logo-link {
   @media (max-width: $tablet-max-width) {
     display: none;
   }
 }
+
 
 //СТАЙЛГАЙД
 .main-navigation__item a[href*="#"]:focus {
