@@ -2,28 +2,28 @@
 /*ГЛОБАЛЬНЫЕ СТИЛИ*/
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../font/OpenSans-Light.woff") format("woff");
+  src: url("../fonts/opensans-light.woff2") format("woff2"), url("../font/opensans-light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../font/OpenSans-Regular.woff") format("woff");
+  src: url("../fonts/opensans-regular.woff2") format("woff2"), url("../font/opensans-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  src: url("../fonts/opensans-semibold.woff2") format("woff2"), url("../fonts/opensans-semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  src: url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap; }
@@ -546,26 +546,26 @@ img {
   width: 100%;
   max-width: 1266px;
   margin: 0 auto;
-  margin-bottom: 102px;
+  margin-bottom: 60px;
   padding: 0 31px;
   padding-top: 5px;
   box-sizing: border-box; }
   @media (max-width: 1023px) {
     .about-facts {
       width: 100%;
-      margin-bottom: 28px;
+      margin-bottom: -23px;
       padding: 0 91px; } }
   @media (max-width: 767px) {
     .about-facts {
       width: 100%;
-      margin-bottom: 35px;
+      margin-bottom: 47px;
       padding: 0 15px;
       padding-top: 2px; } }
 
 .about-facts h2 {
   width: 362px;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 100px;
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
@@ -574,9 +574,12 @@ img {
   @media (max-width: 1023px) {
     .about-facts h2 {
       width: 290px;
-      margin-bottom: 30px;
+      margin-bottom: 82px;
       font-size: 24px;
       line-height: 41px; } }
+  @media (max-width: 767px) {
+    .about-facts h2 {
+      margin-bottom: 28px; } }
 
 .about-facts__list {
   margin: 0;
@@ -585,54 +588,63 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%; }
+  width: 100%;
+  counter-reset: list; }
 
 .about-facts__item {
+  position: relative;
   width: 21.8%;
   margin-left: 1.6%;
   margin-right: 1.6%;
-  margin-bottom: 50px;
-  text-align: center; }
+  margin-bottom: 90px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+  color: #000000;
+  text-align: center;
+  list-style-type: none; }
   @media (max-width: 1023px) {
     .about-facts__item {
       width: 44.8%;
       margin-left: 2.6%;
       margin-right: 2.6%;
-      margin-bottom: 42px; } }
+      margin-bottom: 93px; } }
   @media (max-width: 767px) {
     .about-facts__item {
       width: 100%;
-      min-height: 130px;
       margin-left: 0;
       margin-right: 0;
-      margin-bottom: 30px; } }
+      margin-bottom: 35px;
+      padding-top: 57px;
+      font-size: 18px; } }
 
-.about-facts__item p:first-child {
-  margin: 0;
-  margin-bottom: 15px;
+.about-facts__item:first-child {
+  padding-top: 4px; }
+  @media (max-width: 767px) {
+    .about-facts__item:first-child {
+      padding-top: 57px;
+      margin-bottom: 25px; } }
+
+.about-facts__item::before {
+  position: absolute;
+  top: -53px;
+  left: 50%;
+  transform: translate(-50%, 0);
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
   letter-spacing: -1.27px;
-  color: #0ad9c6; }
+  color: #0ad9c6;
+  counter-increment: list;
+  content: "0" counter(list); }
   @media (max-width: 767px) {
-    .about-facts__item p:first-child {
-      margin-bottom: 8px; } }
+    .about-facts__item::before {
+      top: 12px; } }
 
 @media (max-width: 767px) {
-  .about-facts__item:first-child p:first-child {
-    margin-bottom: 16px; } }
-
-.about-facts__item p:last-child {
-  margin: 0;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 34px;
-  letter-spacing: -0.5px;
-  color: #000000; }
-  @media (max-width: 767px) {
-    .about-facts__item p:last-child {
-      font-size: 18px; } }
+  .about-facts__item:first-child::before {
+    top: 0; } }
 
 @media (max-width: 767px) {
   .about-facts__item br {
@@ -654,7 +666,7 @@ img {
 .types-bicycles h2 {
   width: 288px;
   margin: 0 auto;
-  margin-bottom: 51px;
+  margin-bottom: 50px;
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
@@ -998,25 +1010,23 @@ img {
       font-size: 18px; } }
 
 .page-footer__address-block p {
-  margin: 0;
+  width: 555px;
+  margin: 0 auto;
   font-weight: 400;
   font-size: 17px;
   line-height: 31px;
   color: rgba(0, 0, 0, 0.7); }
-
-.page-footer__address-block br {
-  display: block; }
   @media (max-width: 1023px) {
-    .page-footer__address-block br {
-      display: none; } }
+    .page-footer__address-block p {
+      width: 629px; } }
   @media (max-width: 767px) {
-    .page-footer__address-block br {
-      display: block; } }
+    .page-footer__address-block p {
+      width: 100%; } }
 
 .page-footer__map-block {
   width: 100%;
   height: 530px;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
   background-color: #c9ccd4;
   background-image: url("../img/map-desktop.png");
   background-repeat: no-repeat;
