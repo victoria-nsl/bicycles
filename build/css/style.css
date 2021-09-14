@@ -63,6 +63,10 @@ img {
   overflow: hidden; }
 
 /*БЛОКИ*/
+.page-body__overflow {
+  height: 100vh;
+  overflow-y: hidden; }
+
 .page-header {
   min-height: 825px;
   margin-bottom: 150px;
