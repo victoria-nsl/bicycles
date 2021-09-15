@@ -1,5 +1,5 @@
 (function () {
-  const REGULAR_EXPRESSION_PHONE =/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+  const REGULAR_EXPRESSION_PHONE =/^\+?[\d()\- ]+$/;
   const REGULAR_EXPRESSION_NAME =/^[A-Za-zА-Яа-яЁё]+$/;
   const MESSAGE_NAME ='Укажите ваше имя. Ввести данные можно на русском языке  и латиницей';
   const MESSAGE_PHONE ='Заполните номер вашего телефона. Номер должен содержать только цифры, пробелы, символы: - () +';
