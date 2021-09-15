@@ -467,7 +467,7 @@ img {
       margin-bottom: 20px; } }
   @media (max-width: 767px) {
     .promo__list {
-      width: 288px; } }
+      width: 90%; } }
 
 .promo__item:not(:last-child) {
   margin-bottom: 20px; }
@@ -517,7 +517,7 @@ img {
       padding: 16px 49px 14px 49px; } }
   @media (max-width: 767px) {
     .promo__form-block button {
-      width: 288px;
+      width: 90%;
       padding: 14px 28px 14px 28px; } }
 
 .promo__list input:focus {

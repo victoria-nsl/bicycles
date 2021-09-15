@@ -1,8 +1,8 @@
 (function () {
   const REGULAR_EXPRESSION_PHONE =/^\+?[\d()\- ]+$/;
-  const REGULAR_EXPRESSION_NAME =/^[A-Za-zА-Яа-яЁё]+$/;
+  const REGULAR_EXPRESSION_NAME =/^[A-Za-zА-Яа-яЁё\s]+$/;
   const MESSAGE_NAME ='Укажите ваше имя. Ввести данные можно на русском языке  и латиницей';
-  const MESSAGE_PHONE ='Заполните номер вашего телефона. Номер должен содержать только цифры, пробелы, символы: - () +';
+  const MESSAGE_PHONE ='Заполните номер вашего телефона. Номер должен содержать только цифры, пробелы, символы: - ()  и + в начале';
 
   const page = document.querySelector('.page-body');
   const navigationMain = document.querySelector('.main-navigation');
